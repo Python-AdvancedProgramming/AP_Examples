@@ -10,4 +10,4 @@ with ui.splitter(value=20).classes('w-full h-screen') as splitter:
         with ui.element('div').classes('w-full h-full p-4'):
             ui.label('Detail Area')
 
-ui.run()
+ui.run(reload=False)

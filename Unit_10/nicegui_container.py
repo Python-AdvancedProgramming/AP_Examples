@@ -77,4 +77,5 @@ with ui.tab_panels(tabs, value=general).classes('w-full'):
 
     with ui.tab_panel(about).classes('p-4'):
         ui.label('Version 1.2.3')
-ui.run()
+
+ui.run(reload=False)

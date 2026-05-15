@@ -7,4 +7,5 @@ with ui.column().classes('w-full p-6 gap-6'):
         ui.button('Add User')
     with ui.card().classes('p-4'):
         ui.label('Content Area')
-ui.run()
+
+ui.run(reload=False)

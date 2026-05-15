@@ -7,6 +7,7 @@ with ui.row().classes('w-full min-h-screen no-wrap'):
         ui.button('Settings')
 
     with ui.column().classes('flex-grow p-6'):
+        # flex-grow allows this column to take up the remaining space
         ui.label('Main Content')
 
-ui.run()
+ui.run(reload=False)

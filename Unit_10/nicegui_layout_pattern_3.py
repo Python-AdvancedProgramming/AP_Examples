@@ -6,4 +6,5 @@ with ui.column().classes('w-full p-6 gap-6'):
         for i in range(8):
             with ui.card().classes('p-4'):
                 ui.label(f'Card {i}')
-ui.run()
+
+ui.run(reload=False)
