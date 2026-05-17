@@ -113,7 +113,7 @@ ui.separator()
 
 state = {
     'name': 'Alice',
-    'score': 37,
+    'score': 78,
     'show_warning': False,
 }
 

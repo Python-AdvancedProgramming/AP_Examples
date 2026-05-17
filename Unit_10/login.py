@@ -54,6 +54,8 @@ def login_page():
 
     with ui.card().classes('absolute-center shadow-2xl p-8 w-80'):
         ui.label('Login').classes('text-2xl font-bold mb-2')
+        # on => Attach an event handler
+        # keydown.enter => Trigger on Enter key press
         username = ui.input('Username').on(
             'keydown.enter', try_login).classes('w-full')
         password = ui.input('Password', password=True).on(
@@ -63,6 +65,7 @@ def login_page():
 
 @ui.page('/')
 def index():
+    # Since the user is not logged in yet, authenticated is missing/False, so they are redirected to /login
     if not app.storage.user.get('authenticated'):
         ui.navigate.to('/login')
     elif app.storage.user.get('role') == 'admin':
@@ -73,6 +76,7 @@ def index():
             ui.label(
                 f"Hello {app.storage.user.get('username')}, you are not an admin.")
             ui.button('Logout', on_click=lambda: (
+                # clear makes => app.storage.user = {}, so authenticated becomes False again
                 app.storage.user.clear(), ui.navigate.to('/login')))
 
 
