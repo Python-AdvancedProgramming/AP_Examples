@@ -2,6 +2,8 @@
 from nicegui import ui
 
 with ui.row().classes('w-full min-h-screen no-wrap'):
+    # min-h-screen => element is at least as tall as the full browser window
+    # no-wrap => prevent the columns from wrapping to the next line
     with ui.column().classes('w-64 p-4 bg-gray-100'):
         ui.button('Dashboard')
         ui.button('Settings')
