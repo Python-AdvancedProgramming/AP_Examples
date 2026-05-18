@@ -49,11 +49,7 @@ with ui.card().classes('w-full max-w-lg p-4'):
 
 ui.separator()
 
-with ui.grid(columns='1 sm:2 lg:3').classes('w-full gap-4'):
-    # default: 1 column
-    # small screens+: 2 columns
-    # large screens+: 3 columns
-
+with ui.grid(columns=1).classes('w-full gap-4 sm:grid-cols-2 lg:grid-cols-3'):
     for i in range(6):
         with ui.card().classes('p-4'):
             ui.label(f'Card {i}').classes('font-semibold')
