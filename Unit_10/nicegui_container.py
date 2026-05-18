@@ -1,15 +1,16 @@
 from nicegui import ui
 
-with ui.row().classes('w-full justify-center gap-3 p-4 border'):
+with ui.row().classes('w-full items-center gap-3'):
+    # w-full       -> row spans the available width
+    # items-center -> vertical align children in the middle (cross-axis)
+    # gap-3        -> spacing between children
 
-    # Left side
     ui.icon('menu')
     ui.label('Title').classes('text-lg font-semibold')
 
-    # Expanding spacer
-    ui.space()
+    # A common pattern: push items to the far right
+    ui.space()  # Quasar spacer; expands to fill available space
 
-    # Right side
     ui.button('Save')
     ui.button('Cancel').props('flat')
 
